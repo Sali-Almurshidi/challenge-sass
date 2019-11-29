@@ -1,0 +1,41 @@
+@mixin button-shadow () {
+  -webkit-box-shadow: 10px 10px 19px -4px rgba(255, 255, 255, 0.75);
+  -moz-box-shadow: 10px 10px 19px -4px rgba(255, 255, 255, 0.75);
+  box-shadow: 10px 10px 19px -4px rgba(255, 255, 255, 0.75);}
+@mixin success-error-warning-message($color){
+  background-color: $color;
+  padding :10px;
+  color: #2748B3;
+  width: 100%;
+  border: 1px solid #ccc;}
+@mixin somePro($floatDirection , $widthSize){
+  float: $floatDirection;
+  width: $widthSize
+}
+@mixin marginAndPadding ($margin , $padding){
+  margin: $margin;
+  padding: $padding;
+}
+@mixin borderStyle($size , $style , $color){
+  border: $size $style $color;
+}
+@mixin flexGrowBasis($grow , $basis){
+  flex-grow: $grow;
+  flex-basis: $basis;
+}
+@mixin backgroundPackage ($colorBG ,$colRadial, $col1 , $col2 , $col3 ,$imgSi, $sizeImage, $transparent1,$tcolor1 , $tcol1 , $tcol2 , $tcol3 , $tsi1 ,$tsize1
+ ,$transparent2,$tcolor2 , $tcol12 , $tcol22 , $tcol32 , $tsi12 ,$tsize12 ,
+ $transparent3 , $tcol13 , $tcol23 , $tcol33 , $tsi13 ,$tsize3,
+$tcol14 , $tcol24 , $tcol34 , $tsi14 ,$tsize4 , $transparent4 ,
+$bGS1 , $bGS2 , $bGS3 ,$bGS4 ,$bGS5 ,$bGS6 , $bGS7 , $bGS8 ,
+$bGP1 , $bGP2 ,$bGP3 , $bGP4 ,$bGP5 , $bGP6 ,$bGP7 , $bGP8 , $bGA ){
+  background-color: $colorBG;
+  background-image: radial-gradient($colRadial, rgba($col1, $col2, $col3, $imgSi) $sizeImage,
+          transparent $transparent1), radial-gradient($tcolor1, rgba($tcol1, $tcol2, $tcol3, $tsi1) $tsize1,
+          transparent $transparent2), radial-gradient($tcolor2, rgba($tcol12, $tcol22, $tcol32, $tsi12) $tsize12,
+          transparent $transparent3), radial-gradient(rgba($tcol13, $tcol23, $tsi13, $tsize3),
+          rgba($tcol14, $tcol24, $tcol34,$tsi14) $tsize4, transparent $transparent4);
+  background-size: $bGS1 $bGS2, $bGS3 $bGS4, $bGS5 $bGS6, $bGS7 $bGS8;
+  background-position: $bGP1 $bGP2, $bGP3 $bGP4, $bGP5 $bGP6, $bGP7 $bGP8;
+  background-attachment: $bGA
+}
